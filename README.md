@@ -18,7 +18,7 @@
 https://getcomposer.org/
 
 # akses directory
-cd livewire-crud
+cd livewireContact
 
 # jalankan composer update (lama download tergantung dari jaringan kalian)
 composer update
@@ -26,11 +26,11 @@ composer update
 # ubah nama file .env.example menjadi .env
 .env
 
-# Buat database livewire_crud dan edit file .env
+# Buat database livewire_contact dan edit file .env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=livewire_crud
+DB_DATABASE=livewire_contact
 DB_USERNAME=root
 DB_PASSWORD=
 
@@ -39,9 +39,6 @@ php artisan key:generate
 
 # jalankan migrasi
 php artisan migrate
-
-#jalankan seeder
-php artisan db:seed
 
 # buat server
 php artisan serve
