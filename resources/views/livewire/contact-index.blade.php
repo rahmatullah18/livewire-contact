@@ -1,11 +1,10 @@
 <div>
     {{-- The best athlete wants his opponent at his best. --}}
-    {{-- create table contact --}}
     <div class="row">
         <div class="col-12">
-            {{-- @if (session('message'))
+            @if (session('message'))
                 <div class="alert alert-info">{{session('message')}}</div>
-            @endif --}}
+            @endif
 
             @if ($updateStatus == true)
                 <livewire:contact-update>

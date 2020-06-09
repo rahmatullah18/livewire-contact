@@ -30,8 +30,8 @@ class ContactIndex extends Component
     public function contactStored($contact)
     {
         // pesan 
-        toast('Message')->success();
-        // session()->flash('message', 'Data ' . $contact['name'] . ' was stored');
+        // toast('Message')->success();
+        session()->flash('message', 'Data ' . $contact['name'] . ' stored');
     }
 
 
@@ -47,7 +47,8 @@ class ContactIndex extends Component
     public function contactUpdated($contact)
     {
         // pesan 
-        session()->flash('message', 'Data ' . $contact['name'] . ' was updated');
+        session()->flash('message', 'Data ' . $contact['name'] . '  updated');
+        $this->updateStatus = false;
     }
 
     public function destroy($id)
@@ -56,7 +57,7 @@ class ContactIndex extends Component
             $data = Contact::find($id);
             $data->delete();
 
-            session()->flash('message', 'Data was deleted');
+            session()->flash('message', 'Data ' . $data['name'] .' deleted');
         }
     }
 
